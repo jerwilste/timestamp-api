@@ -1,4 +1,5 @@
 var express = require('express');
+var port = process.env.PORT || 8080;
 var moment = require('moment');
 var app = express();
 var path = require('path');
@@ -37,4 +38,4 @@ app.get('/:date', function(req, res){
 	}	
 	res.send(JSON.stringify(fd));
 });
-app.listen('8080', function(){console.log('app listening on 8080');});
+app.listen(port, function(){console.log('app listening on 8080');});
