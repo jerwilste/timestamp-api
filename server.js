@@ -25,6 +25,7 @@ app.get('/:date', function(req, res){
 //			}
 //			else dU = d.unix()*1000;
 		}
+		else dU = d.format('x');
 		fd  = {
 				natural: d.format('MMMM DD YYYY'),
 				unix: dU 
